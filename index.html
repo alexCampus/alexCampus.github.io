@@ -22,22 +22,28 @@
 		</header>
 
 		<main class="mdl-layout__content">
-<div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--4-col">
-		<p id="valInDegrees" class="data"></p>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col"></div>
-	<div class="mdl-cell mdl-cell--5-col">
-		* Si cette valeur reste à null, cet appareil n'est pas équipé de gyroscope ou celui-ci n'est pas reconnu
-	</div>
-</div>
-<div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--4-col"></div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<p id="valueDir" class="data"></p>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col"></div>
-</div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--4-col">
+					<p id="valInDegrees" class="data"></p>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col"></div>
+				<div class="mdl-cell mdl-cell--5-col">
+					* Si cette valeur reste à null, cet appareil n'est pas équipé de gyroscope ou celui-ci n'est pas reconnu
+					<div class="row">
+					    <div class="input-field col s6">
+					      <input value="Id Pc" id="idPc" type="text" class="validate">
+					      <label class="active" for="IdPc">Id Pc</label>
+					    </div>
+				  	</div>
+				</div>
+			</div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--4-col"></div>
+				<div class="mdl-cell mdl-cell--4-col">
+					<p id="valueDir" class="data"></p>
+				</div>
+				<div class="mdl-cell mdl-cell--4-col"></div>
+			</div>
 			<canvas class="values" id="canvas"></canvas>
 		</main>
 	</div>

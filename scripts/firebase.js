@@ -9,8 +9,8 @@ const config = {
 };
 var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 firebase.initializeApp(config);
-
-const dbRefDir = firebase.database().ref('position');
+const token = 123456;
+const dbRefDir = firebase.database().ref( token + '/position');
 var dirOnPhone = document.getElementById('valueDir'); //Direction de la tête
 var ctx        = document.getElementById("canvas").getContext('2d');
 
