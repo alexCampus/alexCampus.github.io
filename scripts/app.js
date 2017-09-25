@@ -1,7 +1,7 @@
 (function() {
 	var valInDeg 	 = document.getElementById('valInDegrees');//La value en degrés depuis l'initialisation
 	var diversion	 = document.getElementById('version');
-	var idPc	     = myFunction();
+	var idPc	     = document.getElementById('idPc');
 	var triggerAngle = null;
 	var triggerTime  = null;
 	var speed        = null;
@@ -47,9 +47,9 @@
 		}
 			if(speed !== null && speed > 0.12) {
 				active = false;
-				writePhoneData(idPc,dir,speed);
+				writePhoneData(idPc.value,dir,speed);
 			} else {
-				writePhoneData(idPc,"Face",0);
+				writePhoneData(idPc.value,"Face",0);
 			}
 		}
 		console.log("trigStop = "+performance.now());
