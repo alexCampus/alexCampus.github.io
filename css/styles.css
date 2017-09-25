@@ -1,0 +1,31 @@
+canvas {
+    height: 70vh;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px solid black;
+}
+
+main {
+    margin-top:20px;
+}
+
+#version {
+    font-weight: 800;
+}
+
+.data {
+    text-align: center;
+    font-size: 5em;
+}
+
+.mdl-navigation__link {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .data {
+        font-size: 30px;
+    }
+}

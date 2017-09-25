@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KineSensors</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-amber.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">TEST D'AVD</span>
+				<div class="mdl-layout-spacer"></div>
+					<a class="mdl-navigation__link" onClick='window.location.reload()'><i class="material-icons">refresh</i></a>
+					<a class="mdl-navigation__link" onclick="location.href = 'config.html';"><i class="material-icons">settings</i></a>
+					<a class="mdl-navigation__link" onclick="location.href = 'https://github.com/AlpenYeti/AlpenYeti.github.io';" id="version"></a>
+			</div>
+		</header>
+
+		<main class="mdl-layout__content">
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--4-col">
+		<p id="valInDegrees" class="data"></p>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col"></div>
+	<div class="mdl-cell mdl-cell--5-col">
+		* Si cette valeur reste à null, cet appareil n'est pas équipé de gyroscope ou celui-ci n'est pas reconnu
+	</div>
+</div>
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--4-col"></div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<p id="valueDir" class="data"></p>
+	</div>
+	<div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+			<canvas class="values" id="canvas"></canvas>
+		</main>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<script type="text/javascript" src="scripts/firebase.js"></script>
+	<script type="text/javascript" src="scripts/function.js"></script>
+	<script type="text/javascript" src="scripts/app.js"></script>
+</body>
+</html>
