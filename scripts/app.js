@@ -12,6 +12,7 @@
 
 	diversion.innerHTML = version;
 	window.addEventListener("deviceorientation", function(eventOrientation) {
+		console.log(myFunction);
 		console.log("trigStart = "+performance.now());
 		var rotation = eventOrientation.alpha;
 		valInDeg.innerHTML = rotation + '°';
@@ -47,9 +48,9 @@
 		}
 			if(speed !== null && speed > 0.12) {
 				active = false;
-				writePhoneData(idPc.value,dir,speed);
+				writePhoneData(myFunction(),dir,speed);
 			} else {
-				writePhoneData(idPc.value,"Face",0);
+				writePhoneData(myFunction(),"Face",0);
 			}
 		}
 		console.log("trigStop = "+performance.now());
