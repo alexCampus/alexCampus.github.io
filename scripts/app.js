@@ -1,7 +1,7 @@
 (function() {
 	var valInDeg 	 = document.getElementById('valInDegrees');//La value en degrés depuis l'initialisation
 	var diversion	 = document.getElementById('version');
-	var idPc	     = document.getElementById('idPc').value;
+	var idPc	     = myFunction();
 	var triggerAngle = null;
 	var triggerTime  = null;
 	var speed        = null;

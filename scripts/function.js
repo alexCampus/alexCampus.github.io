@@ -28,3 +28,8 @@ function fontSize(speed) {
 	console.log("size = "+size);
 	return size.toString();
 }
+
+function myFunction() {
+    var x = document.getElementById("idPc").value;
+    return x;
+}
