@@ -1,7 +1,7 @@
 (function() {
 	var valInDeg 	 = document.getElementById('valInDegrees');//La value en degrés depuis l'initialisation
 	var diversion	 = document.getElementById('version');
-	var idPc	     = document.getElementById('idPc');
+	var idPc 		 = document.getElementById('idPc');
 	var triggerAngle = null;
 	var triggerTime  = null;
 	var speed        = null;
@@ -9,11 +9,10 @@
 	var active       = true;
 	var version 	 = "1.11.2";
 
-
 	diversion.innerHTML = version;
 	window.addEventListener("deviceorientation", function(eventOrientation) {
-		console.log(myFunction);
 		console.log("trigStart = "+performance.now());
+		alert(document.cookie);
 		var rotation = eventOrientation.alpha;
 		valInDeg.innerHTML = rotation + '°';
 
@@ -48,9 +47,9 @@
 		}
 			if(speed !== null && speed > 0.12) {
 				active = false;
-				writePhoneData(myFunction(),dir,speed);
+				writePhoneData(idPc,dir,speed);
 			} else {
-				writePhoneData(myFunction(),"Face",0);
+				writePhoneData(idPc,"Face",0);
 			}
 		}
 		console.log("trigStop = "+performance.now());

@@ -29,7 +29,9 @@ function fontSize(speed) {
 	return size.toString();
 }
 
-function myFunction() {
-    var x = document.getElementById("idPc").value;
-    return x;
+function tokenRegister() {
+	var token       = document.getElementById('idPc').value; 
+	document.cookie = 'token' + token;
+	window.location = 'file:///C:/Users/alexandre.depembroke/Documents/test-gyro_AlexCampus/index.html'
 }
+
