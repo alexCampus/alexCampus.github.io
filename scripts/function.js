@@ -14,8 +14,8 @@ function speedTest(degStart, rotation) {
 	return total;
 };
 
-function writePhoneData(dir,speed) {
-	firebase.database().ref('position').update({dir: dir, speed: speed});
+function writePhoneData(idPc, dir,speed) {
+	firebase.database().ref('/' + idPc + '/position').update({dir: dir, speed: speed});
 };
 
 function sleep(ms) {
