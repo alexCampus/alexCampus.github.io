@@ -31,7 +31,7 @@ function fontSize(speed) {
 
 function tokenRegister() {
 	var token       = document.getElementById('idPc').value; 
-	document.cookie = 'token' + token;
-	window.location = 'file:///C:/Users/alexandre.depembroke/Documents/test-gyro_AlexCampus/index.html'
+	document.cookie = 'token=' + token;
+	window.location = '/index.html'
 }
 
