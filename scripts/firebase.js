@@ -7,30 +7,44 @@ const config = {
     storageBucket: "test-gyro.appspot.com",
     messagingSenderId: "798663384234"
 };
-var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+let letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 firebase.initializeApp(config);
-const token = 123456;
-const dbRefDir = firebase.database().ref( token + '/position');
-var dirOnPhone = document.getElementById('valueDir'); //Direction de la tête
-var ctx        = document.getElementById("canvas").getContext('2d');
+
+const dbRefDir = firebase.database().ref('/' + idPc + '/position');
+let dirOnPhone = document.getElementById('valueDir'); //Direction de la tête
+let ctx        = document.getElementById("canvas").getContext('2d');
 
 dbRefDir.on('value', async function(snap) {
-	//console.log("SpeedInListener = "+snap.val().speed);
 	//ctx.font = fontSize(snap.val().speed) + "30px Arial";
-	ctx.font = "30px Arial"
-	dirOnPhone.innerHTML = snap.val().dir;
-	switch(snap.val().dir) {
+	ctx.font = "10px Arial";
+	dirOnPhone.innerHTML = "Dir : " + snap.val().Dir;
+	switch(snap.val().Dir) {
 		case 'Gauche':
+            console.log("A gauche");
 			ctx.fillText(letters[Math.floor(Math.random()*26)],30,(canvas.height * 0.5));
 			await sleep(50);
-			ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 			break;
 		case 'Droite':
+            console.log("A droite");
 			ctx.fillText(letters[Math.floor(Math.random()*26)],(canvas.width - 30),(canvas.height * 0.5));
 			await sleep(50);
-			ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+			break;
+		case 'Haut':
+            console.log("En haut");
+			ctx.fillText(letters[Math.floor(Math.random()*26)],(canvas.width * 0.5),30);
+			await sleep(50);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+			break;
+		case 'Bas':
+            console.log("En bas");
+			ctx.fillText(letters[Math.floor(Math.random()*26)],(canvas.width * 0.5),(canvas.height - 30));
+			await sleep(50);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 			break;
 		case 'Face':
+            console.log("Cette soirée là");
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			break;
 	}
