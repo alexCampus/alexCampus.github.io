@@ -12,6 +12,7 @@
 	diversion.innerHTML = version;
 	window.addEventListener("deviceorientation", function(eventOrientation) {
 		console.log("trigStart = "+performance.now());
+		console.log('window.idPc', window.idPc);
 		var rotation = eventOrientation.alpha;
 		valInDeg.innerHTML = rotation + '°';
 		if (rotation < 20 || rotation > 340) {

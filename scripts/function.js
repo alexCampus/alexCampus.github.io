@@ -31,15 +31,21 @@ function fontSize(speed) {
 
 function getFirebaseGame() {
 	var id = document.getElementById('idPc').value;
-	var div = document.getElementById('form_back_token').classList;
+	var div = document.getElementById('form_back_token');
 	var canvas = document.getElementById('canvas').classList;
 	console.log('id', id);
 	axios.get('http://localhost:8000/api/firebase_game/' + id)
 		.then(function(response) {
 			console.log(response);
-			canvas.remove('hidden');
-			div.add('hidden');
-			window.idPc = response.data;
+			if(response.data === false)
+			{
+				console.log('erreur de saisie du code');
+				div.innerHTML = 'erreur de saisie du code';
+			} else {
+				canvas.remove('hidden');
+				div.classList.add('hidden');
+				window.idPc = response.data;
+			}
 		})
 		.catch(function(error) {
 			console.log(error);
