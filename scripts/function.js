@@ -35,7 +35,7 @@ function getFirebaseGame() {
 	var div    = document.getElementById('form_back_token');
 	var canvas = document.getElementById('canvas').classList;
 	console.log('id', id);
-	axios.get('http://localhost:8000/api/firebase_game/' + email)
+	axios.get('http://mealnlive.com/api/firebase_game/' + email)
 		.then(function(response) {
 			console.log(response);
 			if(response.data === false)
