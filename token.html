@@ -23,17 +23,19 @@
 
 		<main class="mdl-layout__content">
 			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--4-col">
+				<!-- <div class="mdl-cell mdl-cell--4-col">
 					<p id="valInDegrees" class="data"></p>
-				</div>
+				</div> -->
 				<div class="mdl-cell mdl-cell--3-col"></div>
 				<div class="mdl-cell mdl-cell--5-col">
 					Veuillez rentrer le code donné par l'ordinateur
 					<div class="row">
 					    <div class="input-field col s6">
-					      <input id="idPc" type="text" class="validate">
-					      <label class="active" for="IdPc">Id Pc</label>
-					      <button onClick="tokenRegister()"></button>
+					    	<form onsubmit="getFirebaseGame()">
+							    <input id="idPc" type="text" class="validate">
+							    <label class="active" for="IdPc">Id Pc</label>
+							    <input  type="submit">					    		
+					    	</form>
 					    </div>
 				  	</div>
 				</div>

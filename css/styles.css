@@ -6,7 +6,9 @@ canvas {
     display: block;
     border: 1px solid black;
 }
-
+.hidden {
+    display: ,none;
+}
 main {
     margin-top:20px;
 }

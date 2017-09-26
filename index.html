@@ -38,16 +38,26 @@
 				</div>
 			</div>
 			<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--5-col">
+					Veuillez rentrer le code donné par l'ordinateur
+					<div class="row">
+					    <div class="input-field col s6" id="form_back_token">
+						    <input id="idPc" type="text" class="validate">
+						    <label class="active" for="IdPc">Id Pc</label>
+						    <button onclick="getFirebaseGame()" type="submit">Validez</button>				    		
+					    </div>
+				  	</div>
+				</div>
 				<div class="mdl-cell mdl-cell--4-col"></div>
 				<div class="mdl-cell mdl-cell--4-col">
 					<p id="valueDir" class="data"></p>
 				</div>
 				<div class="mdl-cell mdl-cell--4-col"></div>
 			</div>
-			<canvas class="values" id="canvas"></canvas>
+			<canvas class="values hidden" id="canvas"></canvas>
 		</main>
 	</div>
-
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
 	<script type="text/javascript" src="scripts/firebase.js"></script>
 	<script type="text/javascript" src="scripts/function.js"></script>
