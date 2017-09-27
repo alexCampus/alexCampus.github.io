@@ -52,6 +52,7 @@
 		} else {
             console.log(angles);
             if (Math.abs(yaw/2) < 10 && Math.abs(pitch) < 10) {
+            	sleep(4000);
                 active = true;
                 writePhoneData(idPc, "Face", 0);
                 index = null;
