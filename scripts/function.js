@@ -53,7 +53,7 @@ function getCookie(cname) {
 }
 
 function getFirebaseGame() {
-	var id     = document.getElementById('idPc').value;
+	//var id     = document.getElementById('idPc').value;
 	var email  = document.getElementById('email').value;
 	var div    = document.getElementById('form_back_token');
 	//var canvas = document.getElementById('canvas').classList;
