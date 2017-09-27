@@ -57,10 +57,8 @@ function getFirebaseGame() {
 	var email  = document.getElementById('email').value;
 	var div    = document.getElementById('form_back_token');
 	//var canvas = document.getElementById('canvas').classList;
-	console.log('id', id);
 	axios.get('https://mealnlive.com/api/firebase_game/' + email)
 		.then(function(response) {
-			console.log(response);
 			if(response.data === false)
 			{
 				console.log('erreur de saisie du code');
@@ -70,7 +68,7 @@ function getFirebaseGame() {
 				setCookie('idPc', idPc, 1);
 				//canvas.remove('hidden');
 				div.classList.add('hidden');
-				document.location.href = '/';
+				document.location.href = '/accueil.html';
 			}
 		})
 		.catch(function(error) {
