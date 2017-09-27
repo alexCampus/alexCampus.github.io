@@ -29,16 +29,13 @@
 				<div class="mdl-cell mdl-cell--3-col"></div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<div class="row">
-					    <div class="input-field col s6" id="form_back_token">
-							Veuillez rentrer le code donné par l'ordinateur
-							<div class="row">
-							    <input id="email" type="email" class="validate">
-							    <label class="active" for="Email">Email</label><br>
-							    <button onclick="getFirebaseGame()" type="submit">Validez</button>				    		
-								
-							</div>
+					    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="form_back_token">
+							<!-- Veuillez rentrer le code donné par l'ordinateur -->
+						    <input id="email" type="email" class="mdl-textfield__input">
+						    <label class="mdl-textfield__label" for="Email">Email Du compte Kine Sensor</label><br>
 					    </div>
 				  	</div>
+				    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getFirebaseGame()" type="submit">Validez</button>
 				</div>
 			</div>
 		</main>
