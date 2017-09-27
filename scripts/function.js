@@ -67,8 +67,8 @@ function getFirebaseGame() {
 				idPc = response.data[0].id;
 				setCookie('idPc', idPc, 1);
 				//canvas.remove('hidden');
-				div.classList.add('hidden');
-				document.location.href = '/accueil.html';
+				//div.classList.add('hidden');
+				document.location.href = '/accueil';
 			}
 		})
 		.catch(function(error) {
