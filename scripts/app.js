@@ -14,9 +14,10 @@
 	let arrayDirection = ["Droite", "Gauche", "Bas", "Haut"];
 	let index;
 	let angles = [];
-
+	let idPc = getCookie('idPc');
 
 	diversion.innerHTML = version;
+	
 	window.addEventListener("deviceorientation", function(eventOrientation) {
 
 		let yaw = eventOrientation.alpha;
@@ -51,6 +52,7 @@
 			}
 		} else {
             console.log(angles);
+            console.log('idPc', idPc);
             if (Math.abs(yaw/2) < 10 && Math.abs(pitch) < 10) {
             	sleep(4000);
                 active = true;
@@ -61,4 +63,6 @@
             }
         }
 	},false);
+
+	
 }());

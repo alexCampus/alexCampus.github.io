@@ -29,11 +29,34 @@ function fontSize(speed) {
 	return size.toString();
 }
 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 function getFirebaseGame() {
 	var id     = document.getElementById('idPc').value;
 	var email  = document.getElementById('email').value;
 	var div    = document.getElementById('form_back_token');
-	var canvas = document.getElementById('canvas').classList;
+	//var canvas = document.getElementById('canvas').classList;
 	console.log('id', id);
 	axios.get('https://mealnlive.com/api/firebase_game/' + email)
 		.then(function(response) {
@@ -43,9 +66,11 @@ function getFirebaseGame() {
 				console.log('erreur de saisie du code');
 				div.innerHTML = 'erreur de saisie du code';
 			} else {
-				canvas.remove('hidden');
-				div.classList.add('hidden');
 				idPc = response.data[0].id;
+				setCookie('idPc', idPc, 1);
+				//canvas.remove('hidden');
+				div.classList.add('hidden');
+				document.location.href = '/';
 			}
 		})
 		.catch(function(error) {
