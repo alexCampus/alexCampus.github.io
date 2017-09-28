@@ -6,8 +6,8 @@
 	let speed        = null;
 	let active       = true;
 	let version 	 = "1.16.1";
-	let yawMin		 = 30;
-	let yawMax		 = 160;
+	let yawMin		 = 10;
+	let yawMax		 = 90;
 	let pitchMin	 = 20;
 	let pitchMax	 = 40;
 	let speedMin	 = 0.12;
@@ -39,8 +39,8 @@
 				writePhoneData(idPc,arrayDirection[index],speed);
 				active = false;
 			} else {
-				if(Math.abs(yaw/2) > 10 || Math.abs(pitch) > 10) {
-					if (Math.abs(yaw) > 10) {
+				if(Math.abs(yaw/2) > yawMin || Math.abs(pitch) > pitchMin) {
+					if (Math.abs(yaw) > yawMin) {
 						index = (Math.sign(yaw)+1)/2;
 						triggerAngle = yaw;
 					} else {
@@ -52,8 +52,7 @@
 			}
 		} else {
             console.log(angles);
-            console.log('idPc', idPc);
-            if (Math.abs(yaw/2) < 10 && Math.abs(pitch) < 10) {
+            if (Math.abs(yaw/2) < yawMin && Math.abs(pitch) < pitchMin) {
             	sleep(4000);
                 active = true;
                 writePhoneData(idPc, "Face", 0);
