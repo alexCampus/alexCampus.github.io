@@ -62,7 +62,6 @@ function getFirebaseGame() {
 			if(response.data === false)
 			{
 				alert("erreur de saisie de l'email");
-				div.innerHTML = "erreur de saisie de l'email";
 			} else {
 				idPc = response.data[0].id;
 				setCookie('idPc', idPc, 1);
