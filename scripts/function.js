@@ -61,7 +61,7 @@ function getFirebaseGame() {
 		.then(function(response) {
 			if(response.data === false)
 			{
-				console.log('erreur de saisie du code');
+				alert('erreur de saisie du code');
 				div.innerHTML = 'erreur de saisie du code';
 			} else {
 				idPc = response.data[0].id;
