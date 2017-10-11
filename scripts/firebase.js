@@ -1,11 +1,11 @@
 // Initialize Firebase
 const config = {
-	apiKey: "AIzaSyANTS07COdfwKC-nBhCcsNzL1LNfcNEryg",
-    authDomain: "test-gyro.firebaseapp.com",
-    databaseURL: "https://test-gyro.firebaseio.com",
-    projectId: "test-gyro",
-    storageBucket: "test-gyro.appspot.com",
-    messagingSenderId: "798663384234"
+	apiKey: "AIzaSyDeWc7f-nohx0NRG5Yq7ma2MpzfFI9W_ng",
+	authDomain: "kinesensors.firebaseapp.com",
+	databaseURL: "https://kinesensors.firebaseio.com",
+	projectId: "kinesensors",
+	storageBucket: "",
+	messagingSenderId: "793802367050"
 };
 let letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 firebase.initializeApp(config);
